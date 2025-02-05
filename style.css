@@ -125,3 +125,42 @@ h2 {
     cursor: pointer;
     transform-origin: center;  /* Makes the scale animation centered */
 }
+
+/* Add responsive font sizes */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .scroll-section-text {
+        font-size: 24px;
+    }
+
+    .scroll-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* Add even smaller sizes for very small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .scroll-section-text {
+        font-size: 20px;
+    }
+}
