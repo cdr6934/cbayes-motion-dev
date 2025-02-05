@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    font-size: 96px;
+    font-size: clamp(2rem, 5vw, 96px);
     color: #000;
     display: block;
     transform: translateX(-100px);
@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-    font-size: 48px;
+    font-size: clamp(1.2rem, 2.5vw, 48px);
     color: #a7a7a7;
     display: block;
     opacity: 0;
@@ -24,7 +24,7 @@ h2 {
 }
 
 .scroll-section-text {
-    font-size: 48px;
+    font-size: clamp(2rem, 5vw, 48px);
 }
 
 
@@ -129,15 +129,15 @@ h2 {
 /* Add responsive font sizes */
 @media (max-width: 768px) {
     h1 {
-        font-size: 48px;
+        font-size: clamp(1.8rem, 4vw, 36px);
     }
 
     h2 {
-        font-size: 24px;
+        font-size: clamp(1rem, 2vw, 20px);
     }
 
     .scroll-section-text {
-        font-size: 24px;
+        font-size: clamp(1.8rem, 4vw, 36px);
     }
 
     .scroll-section {
@@ -153,14 +153,14 @@ h2 {
 /* Add even smaller sizes for very small screens */
 @media (max-width: 480px) {
     h1 {
-        font-size: 36px;
+        font-size: clamp(1.5rem, 3.5vw, 32px);
     }
 
     h2 {
-        font-size: 20px;
+        font-size: clamp(0.9rem, 1.8vw, 18px);
     }
 
     .scroll-section-text {
-        font-size: 20px;
+        font-size: clamp(1.5rem, 3.5vw, 32px);
     }
 }
