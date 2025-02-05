@@ -74,4 +74,34 @@ hover(".hover-text", (element) => {
     )
 })
 
+const footer = document.querySelector('.footer');
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    
+    // Show footer when near bottom of page
+    if (currentScrollPosition + windowHeight >= documentHeight - 100) {
+        footer.classList.add('visible');
+    } else {
+        footer.classList.remove('visible');
+    }
+    
+    lastScrollPosition = currentScrollPosition;
+});
+
+window.addEventListener('scroll', () => {
+    const topBar = document.querySelector('.top-bar');
+    const scrollPosition = window.scrollY;
+    
+    // Change to black after scrolling 100px
+    if (scrollPosition > 100) {
+        topBar.classList.add('scrolled');
+    } else {
+        topBar.classList.remove('scrolled');
+    }
+});
+
 

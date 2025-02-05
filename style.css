@@ -1,6 +1,11 @@
+:root {
+    --section-margin: 15px;
+}
+
 body {
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: #373636;
     font-family: 'Chakra Petch', sans-serif;
     margin: 0;
     padding: 0;
@@ -11,6 +16,8 @@ h1 {
     color: #000;
     display: block;
     transform: translateX(-100px);
+    margin-left: 3%;
+    margin-right: 3%;
     opacity: 0;
     font-weight: 700;
 }
@@ -18,20 +25,22 @@ h1 {
 h2 {
     font-size: clamp(1.2rem, 2.5vw, 40px);
     color: #c0c0c0;
-    display: block;
-    opacity: 0;
     font-weight: 700;
     margin-top: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
     transform: translateY(-100px);
 
 }
 
 .scroll-section-text {
-    font-size: clamp(2rem, 5vw, 24px);
+    
+    font-size: clamp(1.25rem, 0.25vw, 30px);
     color: #000;
-    font-family: 'Chakra Petch', sans-serif;
+    margin-left: 3%;
+    margin-right: 3%;
     font-weight: 300;
-    line-height: 2;
+    line-height: 1.5;
 
 }
 .marker-highlight {
@@ -59,14 +68,29 @@ h2 {
     z-index: 1000;
     display: flex;
     align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-bar.scrolled {
+    background-color: black;
+}
+
+.top-bar a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .logo {
     margin-left: 5%;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 5px 10px;
     transition: all 0.3s ease;
+    color: black;
+}
+
+.top-bar.scrolled .logo {
+    color: white;
 }
 
 .logo:hover {
@@ -82,17 +106,18 @@ h2 {
 
 .scroll-section {
     box-sizing: border-box;
-    width: 100vw;
+    width: calc(100vw - 2 * var(--section-margin));
     min-height: 50vh;
-    display: flex;
+
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 25px;
-    background: var(--hue-1-transparent);
-    margin-top: 25px;
+    padding: 5px;
+    background: #fffbf1; /* Changed to a light cream color */
+    margin: var(--section-margin);
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.1rem;
+    border-radius: 10px;
 }
 
 .scroll-section:nth-child(odd) {
@@ -165,7 +190,7 @@ h2 {
     }
 
     .scroll-section-text {
-        font-size: clamp(1.8rem, 4vw, 36px);
+        font-size: clamp(1.25rem, 0.25vw, 30px);
     }
 
     .scroll-section {
